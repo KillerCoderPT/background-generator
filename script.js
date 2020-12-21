@@ -26,16 +26,12 @@ function randomGradient() {
     color1.value = "#" + randomColor();
     color2.value = "#" + randomColor();
 
-    body.style.background = "linear-gradient(to right, "
-                        + color1.value
-                        + ", "
-                        + color2.value
-                        + ")";
-    css.textContent = "background: " + body.style.background + ";";
+    setGradient();
 }
 
 color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
 btn.addEventListener("click", randomGradient);
 
-
+// On Load
+setGradient();
